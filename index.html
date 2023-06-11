@@ -1,23 +1,45 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<title>Coding Quiz</title>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" type="text/css" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coding Quiz</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-	<h1>Coding Quiz</h1>
-	
-	<div id="quiz-container">
-		<p id="question"></p>
-		<ul id="choices"></ul>
-		<p id="timer"></p>
-		<button id="submit">Submit</button>
-	</div>
-	
-	<script>
-		src="script.js"
-	</script>
+  <header>
+    <h1>Coding Quiz</h1>
+  </header>
+
+  <main>
+    <section id="start-screen">
+      <h2>Welcome to the Coding Quiz!</h2>
+      <p>Test your knowledge of JavaScript fundamentals.</p>
+      <button id="start-btn">Start Quiz</button>
+    </section>
+
+    <section id="quiz-screen" class="hide">
+      <h2>Question</h2>
+      <p id="question-text"></p>
+      <ul id="answer-options">
+        <li><button class="answer-btn"></button></li>
+        <li><button class="answer-btn"></button></li>
+        <li><button class="answer-btn"></button></li>
+        <li><button class="answer-btn"></button></li>
+      </ul>
+    </section>
+
+    <section id="result-screen" class="hide">
+      <h2>Quiz Complete!</h2>
+      <p>Your final score is <span id="final-score"></span>.</p>
+      <form id="initials-form">
+        <label for="initials">Enter your initials:</label>
+        <input type="text" id="initials" required>
+        <button type="submit">Save</button>
+      </form>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
 </body>
 </html>
